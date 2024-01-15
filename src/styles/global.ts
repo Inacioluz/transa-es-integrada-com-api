@@ -1,6 +1,12 @@
 import { createGlobalStyle } from 'styled-components'
 
-export const GlobalStyle = createGlobalStyle`
+interface DefaultTheme {
+  'green-500': string
+  'gray-800': string
+  'gray-100': string
+}
+
+export const GlobalStyle = createGlobalStyle<{ theme: DefaultTheme }>`
   * {
     margin: 0;
     padding: 0;
